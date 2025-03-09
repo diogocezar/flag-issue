@@ -8,8 +8,7 @@ function addFlagToggleButton() {
   flagButton.addEventListener("click", handleFlagToggle);
 
   // Encontrar o botão de edição
-  const container =
-    document.querySelector(".krPEL") || document.querySelector(".cQpCwc");
+  const container = document.querySelector(".krPEL");
 
   if (container) {
     container.appendChild(flagButton);

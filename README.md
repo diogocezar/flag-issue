@@ -19,7 +19,22 @@ Uma extensão para o Chrome que permite adicionar ou remover flags (🚩) dos t�
 ## Como usar
 
 1. Navegue até qualquer página de issue do GitHub
-2. Você verá um novo botão 🚩 ao lado do botão "Edit"
+2. Você verá um novo botão 🚩 ao lado do título da issue
 3. Clique neste botão para adicionar uma flag ao título da issue
 4. Se o título já tiver uma flag, clicar no botão irá removê-la
 5. Quando uma flag é adicionada, um comentário será automaticamente inserido com a data e hora, e você poderá preencher o motivo
+
+## Screenshots
+
+### Botão de flag ao lado do botão de edição
+![Screenshot 1](images/screen-1.png)
+
+### Comentário automático ao adicionar uma flag
+![Screenshot 2](images/screen-2.png)
+
+## Observações
+
+- A extensão funciona apenas em páginas de issues do GitHub
+- É necessário ter permissão para editar a issue para que a funcionalidade funcione corretamente
+- A interface do GitHub pode mudar com o tempo, o que pode afetar o funcionamento da extensão
+- Se você encontrar problemas, verifique se há atualizações disponíveis para a extensão
