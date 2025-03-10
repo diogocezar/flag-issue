@@ -1,13 +1,22 @@
+function hasFlag() {
+  const titleInput = document.querySelector(".markdown-title");
+  if (titleInput) {
+    return titleInput.innerHTML.trim().startsWith("🚩");
+  }
+  return false;
+}
+
 function addFlagToggleButton() {
   if (document.querySelector(".flag-toggle-button")) return;
+
+  const label = hasFlag() ? "Remover Flag" : "🚩 Adicionar";
 
   const flagButton = document.createElement("button");
   flagButton.type = "button";
   flagButton.className = "flag-toggle-button";
-  flagButton.innerHTML = "🚩";
+  flagButton.innerHTML = label;
   flagButton.addEventListener("click", handleFlagToggle);
 
-  // Encontrar o botão de edição
   const container = document.querySelector(".krPEL");
 
   if (container) {
@@ -118,7 +127,6 @@ async function addFlagComment() {
   }
 }
 
-// Função para observar mudanças no DOM e adicionar o botão quando necessário
 function observeDOMChanges() {
   console.log("GitHub Flag Toggle: Iniciando observação do DOM");
 
@@ -142,7 +150,6 @@ function observeDOMChanges() {
   });
 }
 
-// Iniciar a observação do DOM quando a página estiver carregada
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     console.log("GitHub Flag Toggle: DOM carregado, iniciando observação");
